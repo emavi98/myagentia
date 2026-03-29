@@ -35,7 +35,7 @@ export default function Header() {
           fontFamily: 'var(--mono)',
           marginTop: 2,
         }}>
-          Centro de Control de Agentes IA — 7 agentes, 1 brief, código real
+          Centro de Control de Agentes IA — 7 agentes, 1 brief, código real!
         </p>
       </div>
       <div style={{
