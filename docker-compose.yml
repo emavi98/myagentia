@@ -1,0 +1,31 @@
+services:
+  api:
+    build: ./api
+    container_name: devcrew-api
+    restart: unless-stopped
+    env_file: .env
+    volumes:
+      - workspace:/workspace
+    networks:
+      - devcrew-net
+
+  frontend:
+    build: ./frontend
+    container_name: devcrew-frontend
+    restart: unless-stopped
+    volumes:
+      - workspace:/workspace:ro
+    depends_on:
+      - api
+    networks:
+      - devcrew-net
+      - traefik-public
+
+volumes:
+  workspace:
+
+networks:
+  devcrew-net:
+    driver: bridge
+  traefik-public:
+    external: true
