@@ -27,7 +27,7 @@ export default function Header() {
           WebkitBackgroundClip: 'text',
           WebkitTextFillColor: 'transparent',
         }}>
-          DevCrew
+          MyAgenTI
         </h1>
         <p style={{
           fontSize: 12,

@@ -1,4 +1,4 @@
-"""DevCrew — AI Agent Control Room API.
+"""MyAgenTI — AI Agent Control Room API.
 
 FastAPI backend that orchestrates 7 AI agents using the Anthropic SDK
 directly (no CrewAI). Each agent is a prompt+API call that streams
@@ -24,7 +24,7 @@ from pydantic import BaseModel
 
 load_dotenv()
 
-app = FastAPI(title="DevCrew API", version="1.0.0")
+app = FastAPI(title="MyAgenTI API", version="1.0.0")
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -966,4 +966,4 @@ def _detect_language(filepath: str) -> str:
 
 @app.get("/api/health")
 def health() -> dict[str, str]:
-    return {"status": "ok", "service": "devcrew"}
+    return {"status": "ok", "service": "myagenti"}
